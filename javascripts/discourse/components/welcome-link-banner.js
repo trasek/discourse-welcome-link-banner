@@ -57,9 +57,10 @@ export default class WelcomeLinkBanner extends Component {
     );
   }
   
-  @discourseComputed("this.router.currentRouteName", "settings.h1_on_homepage")
+  @discourseComputed("router.currentRouteName", "settings.h1_on_homepage")
   shouldUseH1(currentRouteName, h1OnHomepage) {
     const isHomepage = currentRouteName === `discovery.${defaultHomepage()}`;
+    console.log(`currentRouteName: ${currentRouteName}, isHomepage: ${isHomepage}, h1OnHomepage: ${h1OnHomepage}`);
     return isHomepage && h1OnHomepage;
   }
 
