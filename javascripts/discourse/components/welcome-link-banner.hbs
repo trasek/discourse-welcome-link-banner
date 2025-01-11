@@ -3,7 +3,7 @@
     <div class="wrap welcome-link-banner">
       <div class="welcome-wrapper">
         <div class="welcome-content">
-          {{#if theme-setting "h1_instead_h2"}}
+          {{#if (theme-setting "h1_instead_h2")}}
             <h1>{{html-safe (theme-i18n "meta_banner.welcome")}}</h1>
           {{else}}
             <h2>{{html-safe (theme-i18n "meta_banner.welcome")}}</h2>
