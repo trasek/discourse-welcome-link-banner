@@ -110,4 +110,22 @@ acceptance("Welcome Link Banner - Logged in", function (needs) {
       .dom(".welcome-link-banner-wrapper")
       .doesNotExist("clicking the close button hides the banner");
   });
+
+  test("banner uses h1 on homepage", async function (assert) {
+    settings.h1_on_homepage = true;
+
+    await visit("/");
+
+    assert
+      .dom(".welcome-link-banner-wrapper h1")
+      .exists("shows h1 on homepage");
+
+    settings.h1_on_homepage = false;
+
+    await visit("/");
+
+    assert
+      .dom(".welcome-link-banner-wrapper h2")
+      .exists("shows h2 on homepage when h1_on_homepage is false");
+  });
 });
