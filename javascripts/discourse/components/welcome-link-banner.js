@@ -27,6 +27,10 @@ export default class WelcomeLinkBanner extends Component {
     return this.currentUser?.staff && settings.hide_for_staff;
   }
 
+  get h1_instead_h2() {
+    return this.h1_instead_h2 ? "h1" : "h2";
+  }
+
   get showHere() {
     if (settings.show_on === "all") {
       return true;

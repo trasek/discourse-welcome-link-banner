@@ -59,6 +59,10 @@ hide_for_anon:
   default: false
   description: hide the banner for logged-out users
 
+h1_instead_h2:
+  default: false
+  description: use h1 instead of h2 for the banner title
+
 can_be_dismissed:
   default: true
   description: allow users to dismiss the banner (per device)
