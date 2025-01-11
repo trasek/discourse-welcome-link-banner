@@ -15,6 +15,7 @@ export default class WelcomeLinkBanner extends Component {
     ? localStorage.getItem("discourse_dismissedWelcomeLinkBanner")
     : false;
 
+
   get showTrust() {
     return (
       (this.currentUser &&
@@ -53,6 +54,12 @@ export default class WelcomeLinkBanner extends Component {
       this.showTrust &&
       this.showHere
     );
+  }
+  
+  @discourseComputed("router.currentRouteName", "siteSettings.h1_on_homepage")
+  shouldUseH1(currentRouteName, h1OnHomepage) {
+    const isHomepage = currentRouteName === `discovery.${defaultHomepage()}`;
+    return isHomepage && h1OnHomepage;
   }
 
   get isHomepage() {
