@@ -1,4 +1,5 @@
 import Component from "@glimmer/component";
+import discourseComputed from "discourse-common/utils/decorators";
 import { tracked } from "@glimmer/tracking";
 import { action } from "@ember/object";
 import { service } from "@ember/service";
