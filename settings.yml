@@ -59,9 +59,9 @@ hide_for_anon:
   default: false
   description: hide the banner for logged-out users
 
-h1_instead_h2:
+h1_on_homepage:
   default: false
-  description: use h1 instead of h2 for the banner title
+  description: display h1 instead h2 in title tag on homepage
 
 can_be_dismissed:
   default: true
